@@ -6,6 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <style>
+        body    {
+            background-color: rgb(105,105,173); 
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(255,212,22);
+        }
+    </style>
+    <h1>Hello word!</h1>
+    <p>Iniciando em javaScript</p>
+
+    <script>
+        var nome = window.prompt('Informe o seu nome:')
+        window.alert('Bem vindo, '+nome)
+
+        var somarSim = window.confirm('Vamos somar?');
+
+        if(somarSim){
+            var primeiroValor = Number(window.prompt('Digite o primerio valor'))
+
+                primeiroValor+= parseInt(window.prompt('Digite o segundo valro'))
+            
+                window.alert(`Sua soma deu ${primeiroValor}`)
+
+        }
+
+        document.write(`Obrigado por somar, ${nome}`)
+    </script>
 </body>
 </html>
