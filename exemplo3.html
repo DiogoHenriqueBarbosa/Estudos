@@ -13,27 +13,56 @@
             font: normal 20pt Impact;
         }
 
-        #titulo{
+        h1#titulo{
             font: bold 50pt Impact;
             
         }
 
+        div#bloco{
+            text-align: center;
+            background-color: aliceblue;
+            line-height: 200px;
+            width: 200px;
+            height: 200px;
+        }
+
     </style> 
     <h1 id="titulo">Exemplo usando Dom</h1>
+    <div id = "bloco">Interaja</div>
+
     <div class= "test"><p>Diogo usando javaScript</p></div>
    
     <script>
+        var testIntercao = document.querySelector('div#bloco')
+
+        testIntercao.addEventListener('click',click)
+        testIntercao.addEventListener('mouseenter', entrou)
+        testIntercao.addEventListener('mouseout', saiu)
+
+        function saiu(){
+            testIntercao.innerHTML = 'Interaja'
+            testIntercao.style.background = 'aliceblue'
+        }
+
+        function entrou(){
+            testIntercao.innerHTML = 'Entrou'
+        }
+
+        function click(){
+            testIntercao.innerHTML = 'Clicoou'
+            testIntercao.style.background = 'red'
+        }
         
 
         var d  = document.querySelector('h1#titulo')
         d.style.background = 'blue'
-        window.alert('Texto Antigo -> '+d.innerHTML)
+        //window.alert('Texto Antigo -> '+d.innerHTML)
         d.innerHTML = "Aletrado por Dom"
 
         var test = document.getElementsByTagName('p')[0]
         test.innerText = "Altereado por Dom"
         
-       
+        
         
         </script>
 
