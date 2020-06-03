@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 3</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(233,123,133);
+            color: rgb(100,0,255);
+            font: normal 20pt Impact;
+        }
+
+        #titulo{
+            font: bold 50pt Impact;
+            
+        }
+
+    </style> 
+    <h1 id="titulo">Exemplo usando Dom</h1>
+    <div class= "test"><p>Diogo usando javaScript</p></div>
+   
+    <script>
+        
+
+        var d  = document.querySelector('h1#titulo')
+        d.style.background = 'blue'
+        window.alert('Texto Antigo -> '+d.innerHTML)
+        d.innerHTML = "Aletrado por Dom"
+
+        var test = document.getElementsByTagName('p')[0]
+        test.innerText = "Altereado por Dom"
+        
+       
+        
+        </script>
+
+</body>
+</html>
