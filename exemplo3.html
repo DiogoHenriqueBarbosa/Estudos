@@ -26,13 +26,37 @@
             height: 200px;
         }
 
-    </style> 
-    <h1 id="titulo">Exemplo usando Dom</h1>
-    <div id = "bloco">Interaja</div>
+        div#Calculadora{
+            width: 200px;
+            text-align: center;
+            
+        }
+        p#valor{
+           font-size: 20px;
+        }
+        p#resultado{
+            font: normal 2px;
+        }
 
-    <div class= "test"><p>Diogo usando javaScript</p></div>
-   
-    <script>
+    </style> 
+        
+        
+        <h1 id="titulo">Exemplo usando Dom</h1>
+        <div id = "bloco">Interaja</div>
+
+        <div class= "test"><p>Diogo usando javaScript</p></div>
+
+        <div id= "Calculadora">
+           
+            <input type="number" name="txtn1" id="inputNumero1"> +
+            <input type="number" name="txtn2" id="inputNumero2">
+            <input type="button" value="Somar" onclick="somar()">
+           
+            <div id="resultado"><p id="valor">resultado</p></div>
+        </div>
+    
+    
+   <script>
         var testIntercao = document.querySelector('div#bloco')
 
         testIntercao.addEventListener('click',click)
@@ -62,8 +86,17 @@
         var test = document.getElementsByTagName('p')[0]
         test.innerText = "Altereado por Dom"
         
+        function somar(){
+        var resultado = document.querySelector('div#resultado')
+        var input1 = document.querySelector('input#inputNumero1')
+        var input2 = document.querySelector('input#inputNumero2')
         
+        var numb1 = Number(input1.value)
+        var numb2 = Number(input2.value)
         
+        resultado.innerHTML = `A soma dos valores ${numb1} + ${numb2} é igual a ${numb1+numb2}`
+        }
+
         </script>
 
 </body>
