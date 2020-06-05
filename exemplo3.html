@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo 3</title>
 </head>
+
 <body>
     <style>
-        body{
-            background-color: rgb(233,123,133);
-            color: rgb(100,0,255);
+        body {
+            background-color: rgb(233, 123, 133);
+            color: rgb(100, 0, 255);
             font: normal 20pt Impact;
         }
 
-        h1#titulo{
+        h1#titulo {
             font: bold 50pt Impact;
-            
+
         }
 
-        div#bloco{
+        div#bloco {
             text-align: center;
             background-color: aliceblue;
             line-height: 200px;
@@ -26,78 +28,101 @@
             height: 200px;
         }
 
-        div#Calculadora{
+        div#Calculadora {
             width: 200px;
             text-align: center;
-            
+
         }
-        p#valor{
-           font-size: 20px;
+
+        p#valor {
+            font-size: 20px;
         }
-        p#resultado{
+
+        p#resultado {
             font: normal 2px;
         }
+    </style>
 
-    </style> 
-        
-        
-        <h1 id="titulo">Exemplo usando Dom</h1>
-        <div id = "bloco">Interaja</div>
 
-        <div class= "test"><p>Diogo usando javaScript</p></div>
+    <h1 id="titulo">Exemplo usando Dom</h1>
+    <div id="bloco">Interaja</div>
 
-        <div id= "Calculadora">
-           
-            <input type="number" name="txtn1" id="inputNumero1"> +
-            <input type="number" name="txtn2" id="inputNumero2">
-            <input type="button" value="Somar" onclick="somar()">
-           
-            <div id="resultado"><p id="valor">resultado</p></div>
+    <div class="test">
+        <p>Diogo usando javaScript</p>
+    </div>
+
+    <div id="Calculadora">
+
+        <input type="number" name="txtn1" id="inputNumero1"> +
+        <input type="number" name="txtn2" id="inputNumero2">
+        <input type="button" value="Somar" onclick="somar()">
+
+        <div id="resultado">
+            <p id="valor">resultado</p>
         </div>
-    
-    
-   <script>
+    </div>
+
+
+    <script>
         var testIntercao = document.querySelector('div#bloco')
 
-        testIntercao.addEventListener('click',click)
+        testIntercao.addEventListener('click', click)
         testIntercao.addEventListener('mouseenter', entrou)
         testIntercao.addEventListener('mouseout', saiu)
 
-        function saiu(){
+        function saiu() {
             testIntercao.innerHTML = 'Interaja'
             testIntercao.style.background = 'aliceblue'
         }
 
-        function entrou(){
+        function entrou() {
             testIntercao.innerHTML = 'Entrou'
         }
 
-        function click(){
+        function click() {
             testIntercao.innerHTML = 'Clicoou'
             testIntercao.style.background = 'red'
         }
-        
 
-        var d  = document.querySelector('h1#titulo')
+
+        var d = document.querySelector('h1#titulo')
         d.style.background = 'blue'
         //window.alert('Texto Antigo -> '+d.innerHTML)
         d.innerHTML = "Aletrado por Dom"
 
         var test = document.getElementsByTagName('p')[0]
-        test.innerText = "Altereado por Dom"
-        
-        function somar(){
-        var resultado = document.querySelector('div#resultado')
-        var input1 = document.querySelector('input#inputNumero1')
-        var input2 = document.querySelector('input#inputNumero2')
-        
-        var numb1 = Number(input1.value)
-        var numb2 = Number(input2.value)
-        
-        resultado.innerHTML = `A soma dos valores ${numb1} + ${numb2} é igual a ${numb1+numb2}`
+        test.innerText = "Altereado DIogo por Dom"
+
+        function somar() {
+            var resultado = document.querySelector('div#resultado')
+            var input1 = document.querySelector('input#inputNumero1')
+            var input2 = document.querySelector('input#inputNumero2')
+
+            var numb1 = Number(input1.value)
+            var numb2 = Number(input2.value)
+
+            resultado.innerHTML = `A soma dos valores ${numb1} + ${numb2} é igual a ${numb1 + numb2}`
+
+            const arrayDeNome = new Array(
+                'Diogo',
+                'Djanira',
+                'Daniela',
+                'Fabio'
+            )
+
+            console.log(arrayDeNome)
+
+            arrayDeNome.push('Diogo')
+
+            ovo.splice(1, 1)
+
+            console.log(arrayDeNome[0])
+
+            
         }
 
-        </script>
+    </script>
 
 </body>
+
 </html>
