@@ -2,8 +2,8 @@ const http = require('http')
 
 const servidor = http.createServer(function (req,res){
     res.end(`
-        <h1> Hello! </h1>
-    `)
+     html
+      `)
 })
 
 servidor.listen(3000)
