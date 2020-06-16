@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test node Diogo",
+  "main": "serve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon sever.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiogoHenriqueBarbosa/test.git"
+  },
+  "author": "Diogo Henrique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiogoHenriqueBarbosa/test/issues"
+  },
+  "homepage": "https://github.com/DiogoHenriqueBarbosa/test#readme",
+  "dependencies": {
+    "express": "4.16.3",
+    "marko": "4.13.4-1"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  }
+}

@@ -1,9 +1,5 @@
-const http = require('http')
+const app  = require('./src/config/custom-express.js')
 
-const servidor = http.createServer(function (req,res){
-    res.end(`
-     html
-      `)
-})
-
-servidor.listen(3000)
+app.listen(3000, function(){
+    console.log('Inciando servidor na porta 3000') }
+)
